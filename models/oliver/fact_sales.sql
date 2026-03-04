@@ -1,6 +1,6 @@
 {{ config(
     materialized = 'table',
-    schema = 'oliver_dw_source'
+    schema = 'dw_oliver'
 ) }}
 
 SELECT
@@ -13,10 +13,9 @@ SELECT
      orl. unit_price,
      quantity * unit_price AS  dollars_sold
 FROM {{ source('oliver_landing', 'orderline') }} orl
-INNER JOIN {{ source('oliver_landing', 'orders') }} ord ON orl.OrderID = ord.OrderID
+INNER JOIN {{ source('oliver_landing', 'orders') }} ord ON orl.Order_ID = ord.Order_ID
 INNER JOIN {{ ref('oliver_dim_customer') }} c ON ord.CUSTOMER_ID = c.customer_id
 INNER JOIN {{ ref('oliver_dim_employee') }} e ON ord.EMPLOYEE_ID = e.employee_id
 INNER JOIN {{ ref('oliver_dim_store') }} s ON ord.STORE_ID = s.store_id
-INNER JOIN {{ ref('oliver_dim_order') }} o ON ord.ORDER_ID = o.order_id
 INNER JOIN {{ ref('oliver_dim_product') }} p ON orl.PRODUCT_ID = p.product_id
-INNER JOIN {{ ref('oliver_dim_date') }} d ON ord.ORDER_DATE = d.date_id;
+INNER JOIN {{ ref('oliver_dim_date') }} d ON ord.ORDER_DATE = d.date_id
