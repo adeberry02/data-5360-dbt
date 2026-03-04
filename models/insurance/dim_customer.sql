@@ -15,4 +15,4 @@ address,
 city,
 state,
 zipcode
-FROM {{ source('insurance_landing', 'customers') }}
+FROM {{ source('insurance_landing', 'customer') }}

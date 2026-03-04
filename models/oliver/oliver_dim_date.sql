@@ -1,6 +1,6 @@
 {{ config(
     materialized = 'table',
-    schema = 'dw_insurance'
+    schema = 'oliver_dw_source'
     )
 }}
 
@@ -10,9 +10,10 @@ with cte_date as (
 
 SELECT
 date_day as date_key,
+date_day as date_id,
 date_day,
-day_of_week as DayOfWeek,
-month_name as month,
+day_of_week,
+month_of_year as month,
 quarter_of_year as quarter,
 year_number as year
 from cte_date
