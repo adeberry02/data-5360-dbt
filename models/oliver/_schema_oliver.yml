@@ -13,3 +13,5 @@ models:
     description: "Store Dimension"
   - name: fact_sales
     description: "Sales Fact"
+  - name: fact_certification
+    description: "Employee Certification (one unique certification for an employee)"
