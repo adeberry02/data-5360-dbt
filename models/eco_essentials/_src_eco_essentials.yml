@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: transactional_landing
+    database: adelaideberry
+    schema: TRANSACTIONAL_DW_SOURCE_ECOESSENTIALS_TRANSACTIONAL_DB
+    tables:
+      - name: customer
+      - name: order_table
+        identifier: order
+      - name: order_line
+      - name: product
+      - name: promotional_campaign
+
+  - name: emailevents_landing
+    database: adelaideberry
+    schema: emailevents_dw_source
+    tables:
+      - name: marketingemails
