@@ -21,9 +21,8 @@ models:
         tests:
           - not_null
   - name: stg_customer_service_interactions
-    description: |
-      Staging model for customer service interactions.
-      Each record represents a call between a customer and an agent.
+    description: "Staging model for customer service interactions.
+      Each record represents a call between a customer and an agent."
     columns:
       - name: issue_type
         tests:
@@ -36,10 +35,9 @@ models:
                 - "Billing Issue"
                 - "Policy Renewal"
   - name: fact_interaction
-    description: |
-      Customer Service Interaction Fact.
+    description: "Customer Service Interaction Fact.
       The grain of this table is customer + agent + date
-      Each record represents a call between a customer and an agent on a given date.
+      Each record represents a call between a customer and an agent on a given date."
     columns:
       - name: customer_key
         tests:
