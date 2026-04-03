@@ -10,7 +10,7 @@ select
     c.certification_name
 from {{ ref('stg_employee_certifications') }} c
 inner join {{ ref('oliver_dim_employee') }} e
-    on c.first_name = e.firstname
-    and c.last_name = e.lastname
+    on c.first_name = e.first_name
+    and c.last_name = e.last_name
 inner join {{ ref('oliver_dim_date') }} d
     on d.date_key = c.certification_awarded_date
