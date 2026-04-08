@@ -6,14 +6,21 @@ sources:
     schema: TRANSACTIONAL_DW_SOURCE_ECOESSENTIALS_TRANSACTIONAL_DB
     tables:
       - name: customer
+        description: "Ecoessentials Customer Dimension"
+  
       - name: order_table
+        description: "Ecoessentials Order Dimensions"
         identifier: order
       - name: order_line
+        description: "Ecoessentials Order Line"
       - name: product
+        description: "Ecoessentials Product Dimension"
       - name: promotional_campaign
+        description: "Ecoessentials Promotional Campaign"
 
   - name: emailevents_landing
     database: adelaideberry
     schema: emailevents_dw_source
     tables:
       - name: marketingemails
+        description: "Marketing Emails Dimension"
