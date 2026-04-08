@@ -4,7 +4,6 @@
     )
 }}
 
-
 with sales_source as (
     select
         customer_id,
