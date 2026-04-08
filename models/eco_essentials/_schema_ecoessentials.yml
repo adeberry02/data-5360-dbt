@@ -27,7 +27,7 @@ models:
                 - "SENT"
                 - "OPEN"
                 - "CLICK"
-
+                
   - name: dim_product
     description: "Ecoessentials Product Dimension"
     columns:
