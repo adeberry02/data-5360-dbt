@@ -1,4 +1,4 @@
-## Data 5360 Final Project Description
+# Data 5360 Final Project Description
 
 This project provided a hands-on introduction to data warehousing. As consultants for Eco Essentials, an eco-friendly cookware company, we took raw data sources and converted them into a functional data warehouse. Eco Essentials can now answer important sales questions and make informed business decisions in an efficient way. Throughout this project, we utilized DBeaver, DBT, Fivetran, and Snowflake.  
 
