@@ -15,7 +15,11 @@ Although the database was now created, we needed to make sure that there were ch
 
 
 ## Step 4: Data Visualization
-
+We rounded out our database project with a visualization component to help answer business questions and use information from the database. EcoEssentials, our client, is interested in which marketing campaigns are performing the best. Due to business needs, we focused on trends in sales and conversions from marketing campaigns to sales. We connected our Snowflake warehouse to Tableau and created dynamic visualizations that cater to the business's needs. 
+We began with a simple chart of sales over time, specifically divided by months. Then, we narrowed the scope and created a top 10 Campaigns by Sales chart. Filters allow us to view sales by individual campaigns and time of the year. These two charts give EcoEssentials a general idea of how their products are doing and how different campaigns affect that success.
+Finally, we created a visualization showing the discount and clicks for each campaign. This helps EcoEssentials understand the engagement with their marketing emails. Higher discounts may not always lead to higher click rates. Now, EcoEssentials can utilize this dashboard to make more informed decisions on future marketing campaigns. 
 
 ## Takeaways
-1. Constant iteration is necessary. At each step in the process, we received feedback and implemented changes to remain on track. Even if something appears perfect when created, it can always fail. 
+1. Constant iteration is necessary. At each step in the process, we received feedback and implemented changes to remain on track. Even if something appears perfect when created, it can always fail.
+2. Attention to detail is very important when creating a data warehouse. For example, the two data sources had different naming conventions (one used underscores, the other didn't). This was a source of confusion throughout the project, and would have been a little fix in the beginning. Additionally, in step two, detail was very important when creating the fact tables. One mistype could create a false join or break the code.
+3. We learned how each tool works together to create a fabulous end product. As mentioned previously, we learned how dbt, Fivetran, and Snowflake work together. Step four allowed us to take a step back, truly understand the data, and generate valuable insights. All the steps are necessary.   
