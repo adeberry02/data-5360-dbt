@@ -5,7 +5,7 @@ This project provided a hands-on introduction to data warehousing. As consultant
 ## Step 1: Enterprise Data Warehouse Design
 To begin this project, we were given two raw data sources stored in a Postgres database and an S3 bucket on AWS. These data sources had different formatting and lacked a standard data structure. We identified each unique business process and combined these data sources to create a comprehensive star-schema entity relationship diagram. To combine the two sources, we had several conformed dimensions and two separate fact tables. This ERD served as the baseline for the formation of our data warehouse. 
 
-[Star Schema ERD] (https://lucid.app/lucidchart/3594d33b-69ff-4354-b708-a6b542b259ca/edit?viewport_loc=-531%2C83%2C1960%2C1105%2C0_0&invitationId=inv_dcce761d-3c9f-4509-809c-3174d24cb030)
+Star Schema ERD: https://lucid.app/lucidchart/3594d33b-69ff-4354-b708-a6b542b259ca/edit?viewport_loc=-531%2C83%2C1960%2C1105%2C0_0&invitationId=inv_dcce761d-3c9f-4509-809c-3174d24cb030
 
 ## Step 2: Extract, Transform, and Load
 Based on the ERD created in step 1, we then created a process to extract, transform, and load the data into the warehouse in Snowflake. We utilized Fivetran to extract and load both data sources. Once the raw data was in Snowflake, we used DBT to transform, create, and populate the dimensional models. To connect fact and dimensions, we created surrogate keys based on the primary identifiers of each row. 
