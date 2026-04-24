@@ -31,7 +31,7 @@ models:
                 - "New Claim"
                 - "Claim Status"
                 - "Policy Change"
-                - "Coverage Info"
+                - "Coverage Info"sxza
                 - "Billing Issue"
                 - "Policy Renewal"
   - name: fact_interaction
